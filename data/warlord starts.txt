@@ -1,0 +1,71 @@
+start "Beetle Start"
+	name "Warlord Start 1"
+	description `You have inherited your uncle's alien warship and fortune... and his dying wish that you use his wealth to grow an empire.
+	thumbnail "thumbnail/hai shield beetle"
+	date 16 11 3010
+	conversation "beetle intro"
+	account
+		credits 1000000
+		score 800
+	ship "Shield Beetle"
+		sprite "ship/hai shield beetle"
+		thumbnail "thumbnail/hai shield beetle"
+		"swizzle" 0
+		attributes
+			category "Heavy Warship"
+			"cost" 17900000
+			"shields" 32000
+			"hull" 9800
+			"required crew" 47
+			"bunks" 95
+			"mass" 650
+			"drag" 8.8
+			"heat dissipation" .60
+			"fuel capacity" 500
+			"cargo space" 142
+			"outfit space" 798
+			"weapon capacity" 333
+			"engine capacity" 150
+			weapon
+				"blast radius" 400
+				"shield damage" 4000
+				"hull damage" 2000
+				"hit force" 3000
+		outfits
+			"Blue Sun Reactor"
+			"Electronic Warfare System" 2
+			"Electron Beam" 8
+			"Fragmentation Grenades" 95
+			"Particle Waveform Turret" 2
+			"Point Defense Turret" 2
+			"Pulse Rifle" 95
+			"Quantum Keystone"
+			"Scanning Module"
+			"Systems Core (Large)"
+			`"Bondir" Atomic Thruster`
+			`"Bufaer" Atomic Steering`
+			"Hyperdrive"
+		engine -44 133
+		engine 44 133
+		gun -22 -102 "Electron Beam"
+		gun 22 -102 "Electron Beam"
+		gun -34 -68 "Electron Beam"
+		gun 34 -68 "Electron Beam"
+		gun -49 -38 "Electron Beam"
+		gun 49 -38 "Electron Beam"
+		gun -61 -14 "Electron Beam"
+		gun 61 -14 "Electron Beam"
+		turret -39 48 "Particle Waveform Turret"
+		turret 39 48 "Particle Waveform Turret"
+		turret -57 75 "Point Defense Turret"
+		turret 57 75 "Point Defense Turret"
+		leak "leak" 40 50
+		leak "flame" 50 80
+		leak "big leak" 60 50
+		explode "tiny explosion" 50
+		explode "small explosion" 50
+		explode "medium explosion" 50
+		explode "large explosion" 50
+		explode "huge explosion" 20
+		"final explode" "final explosion large"
+		description "This huge alien warship is superior to anything found in human space. You're not sure how your uncle obtained it."
