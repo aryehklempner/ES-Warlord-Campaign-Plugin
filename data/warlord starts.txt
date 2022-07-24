@@ -7,6 +7,8 @@ start "Beetle Start"
 	account
 		credits 1000000
 		score 800
+	set "Beetle Start"
+	set "license: Pilot's"
 	ship "Shield Beetle"
 		sprite "ship/hai shield beetle"
 		thumbnail "thumbnail/hai shield beetle"
