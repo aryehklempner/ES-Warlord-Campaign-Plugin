@@ -1,6 +1,6 @@
 start "Beetle Start"
 	name "Warlord Start 1"
-	description `You have inherited your uncle's alien warship and fortune... and his dying wish that you use his wealth to grow an empire.
+	description `You have inherited your uncle's alien warship and fortune... the galaxy lies before you.
 	thumbnail "thumbnail/hai shield beetle"
 	date 16 11 3010
 	conversation "beetle intro"
@@ -38,6 +38,7 @@ start "Beetle Start"
 			"Electronic Warfare System" 2
 			"Electron Beam" 8
 			"Fragmentation Grenades" 95
+			"Large Heat Shunt"
 			"Particle Waveform Turret" 2
 			"Point Defense Turret" 2
 			"Pulse Rifle" 95
@@ -70,4 +71,4 @@ start "Beetle Start"
 		explode "large explosion" 50
 		explode "huge explosion" 20
 		"final explode" "final explosion large"
-		description "This huge alien warship is superior to anything found in human space. You're not sure how your uncle obtained it."
+		description "This alien capital ship is superior to anything found in human space. You're not sure how your uncle obtained it."
