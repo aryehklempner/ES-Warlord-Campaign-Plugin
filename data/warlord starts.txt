@@ -3,7 +3,9 @@ start "Beetle Start"
 	description `You have inherited your uncle's alien warship and fortune... the galaxy lies before you.
 	thumbnail "thumbnail/hai shield beetle"
 	date 16 11 3010
-	conversation "beetle intro"
+	system "Betelgeuse"
+	planet "Prime"
+# conversation "beetle intro"
 	account
 		credits 1000000
 		score 800
@@ -37,11 +39,10 @@ start "Beetle Start"
 			"Blue Sun Reactor"
 			"Electronic Warfare System" 2
 			"Electron Beam" 8
-			"Fragmentation Grenades" 95
+			"Korath Repeater Rifle" 95
 			"Large Heat Shunt"
 			"Particle Waveform Turret" 2
 			"Point Defense Turret" 2
-			"Pulse Rifle" 95
 			"Quantum Keystone"
 			"Scanning Module"
 			"Systems Core (Large)"
