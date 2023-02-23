@@ -1,6 +1,6 @@
 start "Beetle Start"
 	name "Warlord Start 1"
-	description `You have inherited your uncle's alien warship and fortune... the galaxy lies before you.
+	description `You have inherited your uncle's alien warship and fortune... the galaxy lies before you.`
 	thumbnail "thumbnail/hai shield beetle"
 	date 16 11 3010
 	system "Betelgeuse"
