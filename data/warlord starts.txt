@@ -7,6 +7,8 @@ start "Beetle Start"
 	planet "Prime"
 	conversation "beetle intro"
 		`A lawyer visits you with the news that your uncle left you an alien capital ship, along with a million credits.`
+		`What's your name?`
+		name
 		`Go conquer the galaxy!!`
 	account
 		credits 1000000
