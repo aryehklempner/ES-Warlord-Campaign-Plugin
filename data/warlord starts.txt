@@ -41,6 +41,7 @@ start "Beetle Start"
 			"Electron Beam" 8
 			"Korath Repeater Rifle" 95
 			"Large Heat Shunt"
+			"Lasher Pistol" 95
 			"Particle Waveform Turret" 2
 			"Point Defense Turret" 2
 			"Quantum Keystone"
