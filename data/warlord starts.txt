@@ -91,5 +91,5 @@ mission "Yar-har-fiddle-dee-dee"
 	on offer
 		dialog
 			`You're a pirate now! Good luck, and be careful!`
-				decline
+			decline
 		
