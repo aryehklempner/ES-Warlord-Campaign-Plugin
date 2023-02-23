@@ -86,7 +86,7 @@ mission "Yar-har-fiddle-dee-dee"
 	source
 		government Pirate
 	to offer
-		has "reputation: Merchant" <= -1
+		has "reputation: Merchant" < 0
 	on offer
 		dialog
 		`You're a pirate now! Good luck, and be careful!`
