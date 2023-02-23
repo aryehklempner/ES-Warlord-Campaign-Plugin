@@ -46,6 +46,8 @@ start "Beetle Start"
 			"Korath Repeater Rifle" 95
 			"Large Heat Shunt"
 			"Lasher Pistol" 95
+			"Liquid Sodium Cooling"
+			"Local Map"
 			"Particle Waveform Turret" 2
 			"Point Defense Turret" 2
 			"Quantum Keystone"
