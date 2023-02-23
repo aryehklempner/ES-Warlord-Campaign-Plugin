@@ -84,7 +84,7 @@ start "Beetle Start"
 mission "Yar-har-fiddle-dee-dee"
 	landing
 	source
-		government "Pirate"
+		government Pirate
 	to offer
 		has "reputation: Merchant" <= -1
 	on offer
