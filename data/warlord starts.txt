@@ -5,7 +5,9 @@ start "Beetle Start"
 	date 16 11 3010
 	system "Betelgeuse"
 	planet "Prime"
-# conversation "beetle intro"
+	conversation "beetle intro"
+		`A lawyer visits you with the news that your uncle left you an alien capital ship, along with a million credits.`
+		`Go conquer the galaxy!!`
 	account
 		credits 1000000
 		score 800
