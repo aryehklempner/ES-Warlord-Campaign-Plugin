@@ -43,16 +43,18 @@ start "Beetle Start"
 			"Blue Sun Reactor"
 			"Electronic Warfare System" 2
 			"Electron Beam" 8
+			"Hai Octopus Jammer"
 			"Large Heat Shunt"
 			"Lasher Pistol" 95
 			"Liquid Sodium Cooler"
-			"Local Map"
+			"Outskirts Gauger"
 			"Particle Waveform Turret" 2
 			"Point Defense Turret" 2
 			"Quantum Keystone"
 			"Scanning Module"
 			"Systems Core (Large)"
-			"Thermal Repeater Rifle" 95
+# uncomment once capture mechanics reward good defense
+# "Thermal Repeater Rifle" 95
 			`"Bondir" Atomic Thruster`
 			`"Bufaer" Atomic Steering`
 			"Hyperdrive"
@@ -92,3 +94,5 @@ mission "Yar-har-fiddle-dee-dee"
 		`You're a pirate now! Good luck, and be careful!`
 			decline
 		
+mission "Hai Hint: Pirate"
+	
