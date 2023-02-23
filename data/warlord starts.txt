@@ -88,8 +88,7 @@ mission "Yar-har-fiddle-dee-dee"
 	to offer
 		has "reputation: Merchant" < 0
 		has "reputation: Pirate" > -10
-	on offer
-		dialog
-			`You're a pirate now! Good luck, and be careful!`
+	conversation
+		`You're a pirate now! Good luck, and be careful!`
 			decline
 		
