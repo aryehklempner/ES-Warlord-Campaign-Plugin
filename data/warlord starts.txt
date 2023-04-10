@@ -6,7 +6,7 @@ start "Beetle Start"
 	system "Betelgeuse"
 	planet "Prime"
 	conversation "beetle intro"
-		`A lawyer visits you with the news that your uncle left you an alien capital ship, along with a million credits.`
+		`A lawyer visits you with the news that your uncle left you an alien capital ship, along with a million credits in cash.`
 		`What's your name?`
 		name
 		`Go conquer the galaxy!!`
@@ -15,7 +15,7 @@ start "Beetle Start"
 		score 800
 	set "Beetle Start"
 	set "license: Pilot's"
-	ship "Shield Beetle"
+	ship "Shield Beetle" "Orange Herald"
 		sprite "ship/hai shield beetle"
 		thumbnail "thumbnail/hai shield beetle"
 		"swizzle" 0
@@ -32,7 +32,7 @@ start "Beetle Start"
 			"fuel capacity" 500
 			"cargo space" 142
 			"outfit space" 798
-			"weapon capacity" 333
+			"weapon capacity" 348
 			"engine capacity" 150
 			weapon
 				"blast radius" 400
@@ -40,34 +40,33 @@ start "Beetle Start"
 				"hull damage" 2000
 				"hit force" 3000
 		outfits
-			"Blue Sun Reactor"
+			`"Benga" Atomic Thruster`
+			"Antimatter Core"
 			"Electronic Warfare System" 2
-			"Electron Beam" 8
+			"Fuel Processor"
 			"Hai Octopus Jammer"
+			"Hyperdrive"
 			"Large Heat Shunt"
-			"Lasher Pistol" 95
-			"Liquid Sodium Cooler"
-			"Outskirts Gauger"
 			"Particle Waveform Turret" 2
 			"Point Defense Turret" 2
+			"Pug Peacekeeping Staff"
+			"Pug Seeker" 4
+			"Pulse Cannon" 4
 			"Quantum Keystone"
 			"Scanning Module"
+			"Steering (Planetary Class)"
 			"Systems Core (Large)"
-# uncomment once capture mechanics reward good defense
-# "Thermal Repeater Rifle" 95
-			`"Bondir" Atomic Thruster`
-			`"Bufaer" Atomic Steering`
-			"Hyperdrive"
+			"Thruster (Planetary Class)"
 		engine -44 133
 		engine 44 133
-		gun -22 -102 "Electron Beam"
-		gun 22 -102 "Electron Beam"
-		gun -34 -68 "Electron Beam"
-		gun 34 -68 "Electron Beam"
-		gun -49 -38 "Electron Beam"
-		gun 49 -38 "Electron Beam"
-		gun -61 -14 "Electron Beam"
-		gun 61 -14 "Electron Beam"
+		gun -22 -102 "Pulse Cannon"
+		gun 22 -102 "Pulse Cannon"
+		gun -34 -68 "Pulse Cannon"
+		gun 34 -68 "Pulse Cannon"
+		gun -49 -38 "Pug Seeker"
+		gun 49 -38 "Pug Seeker"
+		gun -61 -14 "Pug Seeker"
+		gun 61 -14 "Pug Seeker"
 		turret -39 48 "Particle Waveform Turret"
 		turret 39 48 "Particle Waveform Turret"
 		turret -57 75 "Point Defense Turret"
@@ -81,18 +80,356 @@ start "Beetle Start"
 		explode "large explosion" 50
 		explode "huge explosion" 20
 		"final explode" "final explosion large"
-		description "This alien capital ship is superior to anything found in human space. You're not sure how your uncle obtained it."
+		description "This alien capital ship is superior to anything found in human space. You have no idea how your uncle obtained it."
 
+start "Korsmanath A'awoj Start"
+	name "Warlord Start 2"
+	description `You have inherited your uncle's alien city-ship and fortune... the galaxy lies before you.`
+	thumbnail "thumbnail/korsmanath a-awoj"
+	date 16 11 3010
+	system "Mirfak"
+	planet "Sunracer"
+	conversation "beetle intro"
+		`A lawyer visits you with the news that your uncle left you an alien city-ship, along with a million credits in cash.`
+		`What's your name?`
+		name
+		`Go conquer the galaxy!!`
+	account
+		credits 1000000
+		score 800
+	set "Korsmanath A'awoj Start"
+	set "license: Pilot's"
+	ship "Korsmanath A'awoj"
+		sprite "ship/korsmanath a-awoj"
+		thumbnail "thumbnail/korsmanath a-awoj"
+		attributes
+			category "Superheavy"
+			cost 276900000
+			shields 196500
+			hull 320700
+			"required crew" 1940
+			"bunks" 31920
+			"mass" 12000
+			"drag" 77
+			"heat dissipation" .22
+			"solar collection" 4.2
+			"fuel capacity" 1000
+			"cargo space" 1864
+			"outfit space" 3180
+			"weapon capacity" 1148
+			"engine capacity" 482
+			"atmosphere scan" 100
+			weapon
+				"blast radius" 400
+				"shield damage" 8000
+				"hull damage" 4000
+				"hit force" 12000
+		outfits
+			"Antimatter Core" 3
+			"Electronic Warfare System" 8
+			"Fuel Processor"
+			"Hai Octopus Jammer"
+			"Jump Drive"
+			"Pug Peacekeeping Staff" 31920
+			"Pug Seeker" 4
+			"Liquid Sodium Cooler"
+			"Quantum Keystone"
+			"Thruster (Stellar Class)" 2
+			"Steering (Stellar Class)" 2
+			"Thruster (Planetary Class)"
+			"Scram Drive"
+			"Systems Core (Large)" 3
+		"reverse engine" -90 -464 0.8
+		"reverse engine" 90 -464 0.8
+		"reverse engine" -115.5 -445.5 0.7
+		"reverse engine" 115.5 -445.5 0.7
+		"steering engine" -90 -464
+			zoom 0.7
+			left
+			angle 180
+		"steering engine" 90 -464
+			zoom 0.7
+			right
+			angle 180
+		"steering engine" -115.5 -445.5
+			zoom 0.6
+			left
+			angle 180
+		"steering engine" 115.5 -445.5
+			zoom 0.6
+			right
+			angle 180
+		"steering engine" -152.5 -270
+			angle 45
+			right
+			zoom 0.6
+		"steering engine" 152.5 -270
+			angle 315
+			left
+			zoom 0.6
+		"steering engine" -172 169
+			angle 135
+			left
+			zoom 0.6
+		"steering engine" 172 169
+			angle 225
+			right
+			zoom 0.6
+		"steering engine" -135.5 444
+			zoom 1.2
+			right
+		"steering engine" 135.5 444
+			zoom 1.2
+			left
+		engine 0 481.5
+			zoom 1.7
+		engine -135.5 444
+			zoom 1.6
+		engine 135.5 444
+			zoom 1.6
+		engine -88.5 430.5
+			zoom 0.7
+		engine 88.5 430.5
+			zoom 0.7
+		engine -77 436
+			zoom 0.7
+		engine 77 436
+			zoom 0.7
+		engine -46 454.5
+			zoom 0.8
+		engine 46 454.5
+			zoom 0.8
+		turret -19.5 -438.5 "Warder Anti-Missile"
+		turret 19.5 -438.5 "Warder Anti-Missile"
+		turret -178 -332
+		turret 178 -332
+		turret -186 -285.5
+		turret 186 -285.5
+		turret -131.5 -173.5
+		turret 131.5 -173.5
+		turret -131.5 -156 "Warder Anti-Missile"
+		turret 131.5 -156 "Warder Anti-Missile"
+		turret 46 -12
+		turret -16.5 16
+		turret 62 128
+		turret -75.5 162.5
+		turret -204.5 200
+		turret 204.5 200
+		turret -192.5 257.5 "Warder Anti-Missile"
+		turret 192.5 257.5 "Warder Anti-Missile"
+		turret -72.5 338.5
+		turret 72.5 338.5
+		turret -95.5 365.5
+		turret 95.5 365.5
+		gun -170 -104 "Pug Seeker"
+			angle 315
+		gun 170 -104 "Pug Seeker"
+			angle 45
+		gun -178 -84 "Pug Seeker"
+			angle 290
+		gun 178 -84 "Pug Seeker"
+			angle 70
+		bay "Fighter" -167.5 -420
+			angle 315
+			"launch effect" "korath internal"
+		bay "Fighter" 167.5 -420
+			angle 45
+			"launch effect" "korath internal"
+		bay "Fighter" -179.5 80
+			angle 45
+			back
+			"launch effect" "korath internal"
+		bay "Fighter" 179.5 80
+			angle 315
+			back
+			"launch effect" "korath internal"
+		bay "Fighter" -167.5 -420
+			angle 315
+			"launch effect" "korath internal"
+		bay "Fighter" 167.5 -420
+			angle 45
+			"launch effect" "korath internal"
+		bay "Fighter" -179.5 80
+			angle 45
+			back
+			"launch effect" "korath internal"
+		bay "Fighter" 179.5 80
+			angle 315
+			back
+			"launch effect" "korath internal"
+		bay "Fighter" -167.5 -420
+			angle 315
+			"launch effect" "korath internal"
+		bay "Fighter" 167.5 -420
+			angle 45
+			"launch effect" "korath internal"
+		bay "Fighter" -179.5 80
+			angle 45
+			back
+			"launch effect" "korath internal"
+		bay "Fighter" 179.5 80
+			angle 315
+			back
+			"launch effect" "korath internal"
+		bay "Fighter" -167.5 -420
+			angle 315
+			"launch effect" "korath internal"
+		bay "Fighter" 167.5 -420
+			angle 45
+			"launch effect" "korath internal"
+		bay "Fighter" -179.5 80
+			angle 45
+			back
+			"launch effect" "korath internal"
+		bay "Fighter" 179.5 80
+			angle 315
+			back
+			"launch effect" "korath internal"
+		bay "Fighter" -167.5 -420
+			angle 315
+			"launch effect" "korath internal"
+		bay "Fighter" 167.5 -420
+			angle 45
+			"launch effect" "korath internal"
+		bay "Fighter" -179.5 80
+			angle 45
+			back
+			"launch effect" "korath internal"
+		bay "Fighter" 179.5 80
+			angle 315
+			back
+			"launch effect" "korath internal"
+		bay "Fighter" -167.5 -420
+			angle 315
+			"launch effect" "korath internal"
+		bay "Fighter" 167.5 -420
+			angle 45
+			"launch effect" "korath internal"
+		bay "Fighter" -179.5 80
+			angle 45
+			back
+			"launch effect" "korath internal"
+		bay "Fighter" 179.5 80
+			angle 315
+			back
+			"launch effect" "korath internal"
+		explode "tiny explosion" 30
+		explode "small explosion" 45
+		explode "medium explosion" 50
+		explode "large explosion" 40
+		explode "huge explosion" 50
+		"final explode" "final explosion large"
+		description "This enormous alien city-ship utterly dwarfs anything found in human space. You have no idea how your uncle obtained it."
+
+ship "Met Par Tek 53" "MPT53 (North)"
+	sprite "ship/met par tek 53"
+	thumbnail "thumbnail/met par tek 53"
+	attributes
+		category "Light Warship"
+		"cost" 14480000
+		"shields" 15100
+		"hull" 22200
+		"automaton" 1
+		"crew equivalent" 25
+		"mass" 420
+		"drag" 5.7
+		"heat dissipation" .8
+		"fuel capacity" 400
+		"cargo space" 26
+		"outfit space" 610
+		"weapon capacity" 213
+		"engine capacity" 110
+		"ramscoop" 3
+		weapon
+			"blast radius" 250
+			"shield damage" 3200
+			"hull damage" 1600
+			"hit force" 4800
+	outfits
+		"Thermal Repeater" 3
+		"Thermal Repeater Turret" 6
+		"Double Plasma Core"
+		"Generator (Inferno Class)"
+		"Systems Core (Medium)"
+		"Large Heat Shunt" 3
+		"Thruster (Lunar Class)"
+		"Steering (Planetary Class)"
+		"Jump Drive"
+	
+	engine -24 132
+	engine 24 132
+	gun 0 -92 "Thermal Repeater"
+	gun -10 -65 "Thermal Repeater"
+	gun 10 -65 "Thermal Repeater"
+	turret -36 -45 "Thermal Repeater Turret"
+	turret 36 -45 "Thermal Repeater Turret"
+	turret -38 -28 "Thermal Repeater Turret"
+	turret 38 -28 "Thermal Repeater Turret"
+	turret -40 -8 "Thermal Repeater Turret"
+	turret 40 -8 "Thermal Repeater Turret"
+
+mission "Starter Bounty"
+	landing
+	name "Capture alien ship"
+	waypoint Rajak
+	destination Sunracer
+	to offer
+		has "Beetle Start"
+	on offer
+		conversation
+			`A tall woman in a flight suit appears by your side you as you walk to your ship.`
+			`"Excuse me," she asks, "But that Shield Beetle up ahead is yours, isn't it?"`
+			choice
+				`"That's right."`
+			`"How does eight million credits for capturing an alien warship intact sound?"`
+			choice
+				`"Sure thing!"`
+			`"There's an unknown alien warship roaming the Northern Passage. It was last seen attacking merchants in the Rajak system. Bring it to Sunracer and we'll give you the 8 mil."`
+			`Without saying another word, the mysterious woman spins on her heel and leaves.`
+				accept
+	on accept
+		log "A mysterious woman recognized my uncle's ship and offered me 8 million for capturing an alien warship un a remote system. Audaces Fortuna iuvat!"
+		outfit "Local Map"
+	npc capture
+		system Rajak
+		government "Kor Sestor"
+		personality staying heroic unconstrained
+		ship "MPT53 (North)" "Alien Bounty"
+	on complete
+		conversation
+			`It wasn't an easy fight, but you've brought in the bounty. The alien warship follows you into Sunracer's atmosphere as you enjoy the feeling of bringing in your first prize.`
+			`As promised, before you even climb out, eight million credits are deposited into your account.`
+			`The mysterious woman is waiting for you on the pad, accompanied by a cloaked figure.`
+			`"Congratulations, Captain <last>!" she greets you warmly. "Meet me in the VIP lounge in two hours, and I'll explain what all that was about."`
 mission "Yar-har-fiddle-dee-dee"
 	landing
 	source
 		government Pirate
 	to offer
-		has "reputation: Merchant" < 0
-		has "reputation: Pirate" > -10
-	conversation
-		`You're a pirate now! Good luck, and be careful!`
-			decline
-		
+		has "reputation: Merchant" < -1
+		has "reputation: Pirate" > 0
+	on offer
+		dialog
+			`You're a pirate now! Good luck, and be careful!`
+				decline
+
 mission "Hai Hint: Pirate"
-	
+	source
+		government Pirate
+	to offer
+		has "Yar-har-fiddle-dee-dee: declined"
+	on offer
+		conversation
+			`You hear rumors that your ship was built by rodent-like aliens who live beyond a wormhole in the Far North..."`
+				decline
+
+mission "Unfettered Propose Alliance"
+	source
+		government "Hai (Unfettered)"
+	to offer
+		has "Yar-har-fiddle-dee-dee: declined"
+	on offer
+		conversation
+			`A delegation of Unfettered leaders come to you.`
+			`"Greetings, Unfettered human," they intone. "You are truly Unfettered. You are welcome on our worlds. But why do you not have green skin?"`
+				decline
