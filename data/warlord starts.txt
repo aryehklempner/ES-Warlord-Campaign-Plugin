@@ -49,7 +49,7 @@ start "Beetle Start"
 			"Large Heat Shunt"
 			"Particle Waveform Turret" 2
 			"Point Defense Turret" 2
-			"Pug Peacekeeping Staff"
+			"Pug Peacekeeping Staff" 95
 			"Pug Seeker" 4
 			"Pulse Cannon" 4
 			"Quantum Keystone"
@@ -139,6 +139,7 @@ start "Korsmanath A'awoj Start"
 			"Thruster (Planetary Class)"
 			"Scram Drive"
 			"Systems Core (Large)" 3
+			"Warder Anti-Missile" 6
 		"reverse engine" -90 -464 0.8
 		"reverse engine" 90 -464 0.8
 		"reverse engine" -115.5 -445.5 0.7
