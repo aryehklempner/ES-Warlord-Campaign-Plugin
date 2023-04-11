@@ -378,7 +378,7 @@ mission "Starter Bounty"
 		has "Beetle Start"
 	on offer
 		conversation
-			`A tall woman in a flight suit appears by your side you as you walk to your ship.`
+			`A tall woman in a flight suit suddenly appears by your side you as you walk to your ship.`
 			`"Excuse me," she asks, "But that Shield Beetle up ahead is yours, isn't it?"`
 			choice
 				`"That's right."`
@@ -389,7 +389,7 @@ mission "Starter Bounty"
 			`Without saying another word, the mysterious woman spins on her heel and leaves.`
 				accept
 	on accept
-		log "A mysterious woman recognized my uncle's ship and offered me 8 million for capturing an alien warship un a remote system. Audaces Fortuna iuvat!"
+		log "A mysterious woman recognized my uncle's ship and offered me 8 million for capturing an alien warship in a remote system. Audaces Fortuna iuvat!"
 		outfit "Local Map"
 	npc capture
 		system Rajak
@@ -397,11 +397,51 @@ mission "Starter Bounty"
 		personality staying heroic unconstrained
 		ship "MPT53 (North)" "Alien Bounty"
 	on complete
+		payment 8000000
 		conversation
 			`It wasn't an easy fight, but you've brought in the bounty. The alien warship follows you into Sunracer's atmosphere as you enjoy the feeling of bringing in your first prize.`
 			`As promised, before you even climb out, eight million credits are deposited into your account.`
-			`The mysterious woman is waiting for you on the pad, accompanied by a cloaked figure.`
+			`The mysterious woman is waiting for you on the pad, accompanied by three short, cloaked figures.`
 			`"Congratulations, Captain <last>!" she greets you warmly. "Meet me in the VIP lounge in two hours, and I'll explain what all that was about."`
+
+mission "Mysterious Escort"
+	name "Escort to Shangri-La"
+	source Sunracer
+	destination Shangri-La
+	clearance
+	to offer
+		has "Starter Bounty: done"
+	on offer
+		conversation
+			`When you enter the VIP lounge, you see that the mysterious woman is sitting with the cloaked figures you saw earlier.`
+			`"As promised, I owe you an explanation," she says.`
+			`"I go by Moonstone. I'm a broker of sorts. These three fellows are clients of mine, and they need an escort to a meeting on Shangri-La."`
+			choice
+				`"Sounds good."`
+			`"By the way, you can keep the ship for now," she says. "Just don't sell it or any of the outfits."`
+			choice
+				`"Thanks."`
+			`"No, we're the ones who should be thanking you. That thing was a serious hazard to shipping."`
+			choice
+				`"What do you mean?"`
+			`She raises an eyebrow. "You don't know who built your ship?"`
+			choice
+				`"Nope."`
+			`She smirks slightly, and the cloaked figures shift positions in their chairs. "I'm sure you'll find out eventually."`
+			`"Now, shall we?" Her associates get up, but she makes no move to do so.`
+			`You head out to your ship, and the cloaked figures head for theirs. The woman gives you a playful wave goodbye when you look back at her, still sitting calmly in her chair.`
+				accept	
+	on accept
+		outfit "Local Map"
+	npc accompany save
+		personality escort
+		government "Independent"
+		ship "Star Queen (Hai)" "Grey Goose"
+	on complete
+		payment 150000
+		dialog
+			`You land safely and the escort ship, after refueling, heads somewhere else on the planet. A message from your bank informs you that 150,000 credits were deposited into your acount by a company called Moonstone Consulting Limited.`
+
 mission "Yar-har-fiddle-dee-dee"
 	landing
 	source
@@ -422,15 +462,4 @@ mission "Hai Hint: Pirate"
 	on offer
 		conversation
 			`You hear rumors that your ship was built by rodent-like aliens who live beyond a wormhole in the Far North..."`
-				decline
-
-mission "Unfettered Propose Alliance"
-	source
-		government "Hai (Unfettered)"
-	to offer
-		has "Yar-har-fiddle-dee-dee: declined"
-	on offer
-		conversation
-			`A delegation of Unfettered leaders come to you.`
-			`"Greetings, Unfettered human," they intone. "You are truly Unfettered. You are welcome on our worlds. But why do you not have green skin?"`
 				decline
