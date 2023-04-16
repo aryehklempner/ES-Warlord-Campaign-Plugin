@@ -116,7 +116,7 @@ start "Korsmanath A'awoj Start"
 			"fuel capacity" 1000
 			"cargo space" 1864
 			"outfit space" 3180
-			"weapon capacity" 1148
+			"weapon capacity" 1152
 			"engine capacity" 482
 			"atmosphere scan" 100
 			weapon
@@ -125,20 +125,25 @@ start "Korsmanath A'awoj Start"
 				"hull damage" 4000
 				"hit force" 12000
 		outfits
-			"Antimatter Core" 3
+			"Antimatter Core" 4
+			"Brig"
 			"Electronic Warfare System" 8
 			"Fuel Processor"
-			"Hai Octopus Jammer"
+			"Hai Octopus Jammer" 2
+			"Husk-Slice Turret" 12
 			"Jump Drive"
+			"Liquid Sodium Cooler" 4
+			"Luxury Accommodations"
 			"Pug Peacekeeping Staff" 31920
 			"Pug Seeker" 4
-			"Liquid Sodium Cooler"
+			"Shield Disruptor Turret" 4
 			"Quantum Keystone"
-			"Thruster (Stellar Class)" 2
-			"Steering (Stellar Class)" 2
-			"Thruster (Planetary Class)"
+			"Research Laboratory"
 			"Scram Drive"
-			"Systems Core (Large)" 3
+			"Steering (Stellar Class)" 2
+			"Systems Core (Large)" 5
+			"Thruster (Planetary Class)"
+			"Thruster (Stellar Class)" 2
 			"Warder Anti-Missile" 6
 		"reverse engine" -90 -464 0.8
 		"reverse engine" 90 -464 0.8
@@ -202,26 +207,26 @@ start "Korsmanath A'awoj Start"
 			zoom 0.8
 		turret -19.5 -438.5 "Warder Anti-Missile"
 		turret 19.5 -438.5 "Warder Anti-Missile"
-		turret -178 -332
-		turret 178 -332
-		turret -186 -285.5
-		turret 186 -285.5
-		turret -131.5 -173.5
-		turret 131.5 -173.5
+		turret -178 -332 "Husk-Slice Turret"
+		turret 178 -332 "Husk-Slice Turret"
+		turret -186 -285.5 "Husk-Slice Turret"
+		turret 186 -285.5 "Husk-Slice Turret"
+		turret -131.5 -173.5 "Husk-Slice Turret"
+		turret 131.5 -173.5 "Husk-Slice Turret"
 		turret -131.5 -156 "Warder Anti-Missile"
 		turret 131.5 -156 "Warder Anti-Missile"
-		turret 46 -12
-		turret -16.5 16
-		turret 62 128
-		turret -75.5 162.5
-		turret -204.5 200
-		turret 204.5 200
+		turret 46 -12 "Shield Disruptor Turret"
+		turret -16.5 16 "Shield Disruptor Turret"
+		turret 62 128 "Shield Disruptor Turret"
+		turret -75.5 162.5 "Shield Disruptor Turret"
+		turret -204.5 200 "Husk-Slice Turret"
+		turret 204.5 200 "Husk-Slice Turret"
 		turret -192.5 257.5 "Warder Anti-Missile"
 		turret 192.5 257.5 "Warder Anti-Missile"
-		turret -72.5 338.5
-		turret 72.5 338.5
-		turret -95.5 365.5
-		turret 95.5 365.5
+		turret -72.5 338.5 "Husk-Slice Turret"
+		turret 72.5 338.5 "Husk-Slice Turret"
+		turret -95.5 365.5 "Husk-Slice Turret"
+		turret 95.5 365.5 "Husk-Slice Turret"
 		gun -170 -104 "Pug Seeker"
 			angle 315
 		gun 170 -104 "Pug Seeker"
@@ -440,7 +445,7 @@ mission "Mysterious Escort"
 	on complete
 		payment 150000
 		dialog
-			`You land safely and the escort ship, after refueling, heads somewhere else on the planet. A message from your bank informs you that 150,000 credits were deposited into your acount by a company called Moonstone Consulting Limited.`
+			`You land safely and the escort ship, after refueling, heads somewhere else on the planet. A message from your bank informs you that 150,000 credits have been deposited into your acount by a company called Moonstone Consulting Limited.`
 
 mission "Yar-har-fiddle-dee-dee"
 	landing
@@ -450,7 +455,7 @@ mission "Yar-har-fiddle-dee-dee"
 		has "reputation: Merchant" < -1
 		has "reputation: Pirate" > 0
 	on offer
-		dialog
+		conversation
 			`You're a pirate now! Good luck, and be careful!`
 				decline
 
