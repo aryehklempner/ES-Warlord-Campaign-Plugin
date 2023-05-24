@@ -428,7 +428,7 @@ mission "Mysterious Escort"
 				`"Thanks."`
 			`"No, we're the ones who should be thanking you. That thing was a serious hazard to shipping."`
 			choice
-				`"What do you mean?"`
+				`"What shipping?"`
 			`She raises an eyebrow. "You don't know who built your ship?"`
 			choice
 				`"Nope."`
