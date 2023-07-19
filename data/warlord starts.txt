@@ -119,21 +119,24 @@ start "Korsmanath A'awoj Start"
 			"weapon capacity" 1152
 			"engine capacity" 482
 			"atmosphere scan" 100
+			"ramscoop" 3
 			weapon
 				"blast radius" 400
 				"shield damage" 8000
 				"hull damage" 4000
 				"hit force" 12000
 		outfits
-			"Antimatter Core" 4
+			"Antimatter Core" 5
 			"Brig"
-			"Electronic Warfare System" 8
+			"Electronic Warfare System" 9
 			"Fuel Processor"
 			"Hai Octopus Jammer" 2
 			"Husk-Slice Turret" 12
 			"Jump Drive"
+			"Large Heat Shunt" 2
 			"Liquid Sodium Cooler" 4
 			"Luxury Accommodations"
+			"NDR-114 Android" 2
 			"Pug Peacekeeping Staff" 31920
 			"Pug Seeker" 4
 			"Shield Disruptor Turret" 4
@@ -141,7 +144,8 @@ start "Korsmanath A'awoj Start"
 			"Research Laboratory"
 			"Scram Drive"
 			"Steering (Stellar Class)" 2
-			"Systems Core (Large)" 5
+			"Systems Core (Large)" 8
+			"Tear of Skade" 2
 			"Thruster (Planetary Class)"
 			"Thruster (Stellar Class)" 2
 			"Warder Anti-Missile" 6
@@ -403,11 +407,46 @@ mission "Starter Bounty"
 		ship "MPT53 (North)" "Alien Bounty"
 	on complete
 		payment 8000000
+		event "northern passage traffic resumes"
 		conversation
 			`It wasn't an easy fight, but you've brought in the bounty. The alien warship follows you into Sunracer's atmosphere as you enjoy the feeling of bringing in your first prize.`
 			`As promised, before you even climb out, eight million credits are deposited into your account.`
 			`The mysterious woman is waiting for you on the pad, accompanied by three short, cloaked figures.`
 			`"Congratulations, Captain <last>!" she greets you warmly. "Meet me in the VIP lounge in two hours, and I'll explain what all that was about."`
+
+event "northern passage traffic resumes"
+	system "Ultima Thule"
+		fleet "Small Northern Merchants" 4000
+		fleet "Large Northern Merchants" 4000
+		fleet "Small Core Merchants" 6000
+		fleet "Large Core Merchants" 6000
+		fleet "Small Independent" 9000
+		fleet "Large Independent" 9000
+		fleet "Marauder fleet IX" 90000
+		fleet "Marauder fleet X" 50000
+		fleet "Marauder fleet VIII" 40000
+		fleet "Marauder fleet VII" 22000
+		fleet "Large Northern Pirates" 15000
+		fleet "Large Northern Pirates" 18000
+		fleet "Navy Surveillance" 6000
+		fleet "Small Republic" 6000
+		fleet "Large Republic" 20000
+	system "Rajak"
+		fleet "Small Northern Merchants" 4000
+		fleet "Large Northern Merchants" 4000
+		fleet "Small Core Merchants" 6000
+		fleet "Large Core Merchants" 6000
+		fleet "Small Independent" 9000
+		fleet "Large Independent" 9000
+		fleet "Marauder fleet IX" 90000
+		fleet "Marauder fleet X" 50000
+		fleet "Marauder fleet VIII" 40000
+		fleet "Marauder fleet VII" 22000
+		fleet "Large Northern Pirates" 15000
+		fleet "Large Northern Pirates" 18000
+		fleet "Navy Surveillance" 6000
+		fleet "Small Republic" 6000
+		fleet "Large Republic" 20000
 
 mission "Mysterious Escort"
 	name "Escort to Shangri-La"
@@ -446,11 +485,44 @@ mission "Mysterious Escort"
 		payment 150000
 		dialog
 			`You land safely and the escort ship, after refueling, heads somewhere else on the planet. A message from your bank informs you that 150,000 credits have been deposited into your acount by a company called Moonstone Consulting Limited.`
-
+mission "Grand Tour 1"
+	name "Escort wealthy tourists to Amazon"
+	source Shangri-La
+	destination Amazon
+	to offer
+		has "Mysterious Escort: done"
+	on offer
+		conversation
+			`While you are supervising the loading of your ship's provisions, a well-dressed family approaches you.`
+			`"Hello, Captain!" says the father. "Interested in a lucrative escort job?"`
+			choice
+				`"Sure!"`
+			`"I'm John Adebayo." He goes on to introduce the rest of his family.`
+			`We'd like to take a tour of human space for our daughter's gap year. Our first stop is the jungles of Amazon."
+			choice
+				`"All right then, let's go!"`
+			accept
+	on accept
+		outfit "Local Map"
+	npc accompany save
+		personality escort
+		government "Merchant"
+		ship "Arrow" "Bon Voyage"
+	on complete
+		payment 120000
+		dialog
+			`The Adebayos head for the vehicle rental, telling you to come back in two weeks to escort them on the next leg of their trip.`
+		event "amazon pickup" 12
+mission "Explore Selefkar"
+	landing
+	source "Selefkar Refinery"
+	conversation
+		`"You realize that this station could make a convenient base of operations for anyone who wanted to operate out here..."`
+		decline
 mission "Yar-har-fiddle-dee-dee"
 	landing
 	source
-		government Pirate
+		government "Pirate"
 	to offer
 		has "reputation: Merchant" < -1
 		has "reputation: Pirate" > 0
